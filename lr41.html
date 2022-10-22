@@ -1,0 +1,65 @@
+<html>   
+<head>  
+<meta content="lr4.window", charset="utf-8">
+<title>Window</title>
+<style type="text/css">
+     h1{color: coral;text-align:inherit }
+     body{background-color: burlywood}
+     input{font-weight: 100}
+</style>
+<script>
+    
+        function fun()
+        {
+            var win=window.open(" ","Биография");
+            win.document.open();
+            var Sn=document.getElementById('Second name');
+            var sn=Sn.value;
+            var Fn=document.getElementById('First name');
+            var fn=Fn.value;
+            var Mn=document.getElementById('Middle name');
+            var mn=Mn.value;
+            var Bd=document.getElementById('Birthday date');
+            var bd=Bd.value;
+            var Pb=document.getElementById('Place of birth');
+            var pb=Pb.value;
+            var Fh=document.getElementById('Favourite hobby');
+            var fh=Fh.value;
+            var Nfh=document.getElementById('Not favourite hobby');
+            var nfh=Nfh.value;
+            var str="<h1> О себе </h1>";
+            win.document.write(str);
+            str="Я "+sn+" "+fn+" "+mn+" "+" родился в городе "+pb+" "+bd+"<br>";
+            win.document.write(str);
+            str="<p>Больше всего я люблю "+fh+" "+" ,но при этом я ненавижу "+nfh+".</p>"+"<p> Надеюсь я буду много "+fh+" и мало "+nfh+'.<hr>';
+            win.document.write(str);
+            str ='<br><input type="button" value="закрыть"'+'onClick="window.close();">';
+            win.document.write(str);
+            win.document.close();
+            
+        }
+</script>
+</head>
+<body>
+<form>
+    <pre>
+    Фамилия:            <input type="text" value="Фамилия" id="Second name" name="Second name" size="15"><br>
+    
+    Имя:                <input type="text" value="Имя" id="First name" name="First name" size="15"><br>
+  
+    Отчество:           <input type="text" value="Отчество" id="Middle name" name="Middle name" size="15" ><br>
+
+    Дата рождения:      <input type="date" value="Дата рождения" id="Birthday date" name="Birthday date" size="15"><br>
+    
+    Место рождения:     <input type="text" value="Место рождения" id="Place of birth" name="Place of birth" size="15"><br>
+   
+    Люмимое занятие:    <input type="text" value="Любимое занятие" id="Favourite hobby" name="Favourite hobby" size="15"><br>
+    
+    Не любимое занятие: <input type="text" value="Не любимое занятие" id="Not favourite hobby" name="Not favourite hobby" size="15"><br>
+    
+    <hr>
+    <input type="button" value="Сформировать биографию" OnClick="fun()">
+    </pre>
+</form>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>  
+<head>
+<style>
+h1 {color:gray;text-align:center;}
+body {background-color:ghostwhite; font-weight:bold;}
+input {font-weight:bold;}
+</style>
+<meta charset="utf-8">
+<script type="text/JavaScript">
+function validate()
+{    
+var bc1=document.getElementById('bc1');
+var BC1=bc1.value;
+var bc2=document.getElementById('bc2');
+var BC2=bc2.value;
+var bc3=document.getElementById('bc3');
+var BC3=bc3.value;
+
+var tc1=document.getElementById('tc1');
+var TC1=tc1.value;
+var tc2=document.getElementById('tc2');
+var TC2=tc2.value;
+var tc3=document.getElementById('tc3');
+var TC3=tc3.value;
+    
+var sign1=document.getElementById('sign');
+var Sign1=sign1.value; 
+var heading=document.getElementById('heading');
+var Heading=heading.value;
+var colore=null;
+var coloreText=null;
+var win=window.open(" ","New doc");
+ win.document.open();
+    if(bc1.selected)
+        {
+            colore=BC1;
+        }
+    else
+        if(bc2.selected)
+            {
+                colore=BC2;
+            }
+    else
+        if(bc3.selected)
+            {
+                colore=BC3;
+            }
+if(tc1.checked)
+    {
+        coloreText=TC1;
+    }
+    else
+        if(tc2.checked)
+            {
+                coloreText=TC2;
+            }
+    else
+        if(tc3.checked)
+    {
+        coloreText=TC3;
+    }
+var desine1="<style> body{color:";
+var desine2=";text-align:center;}body{background-color:";
+var desine3=";font-weight:bold;}input {font-weight:bold;}</style>";
+win.document.write(desine1+coloreText+desine2+colore+desine3);
+var head="<h1>"+Heading+"</h1>";
+win.document.write(head);
+    var str1="<body>";
+    var str2="</body>";
+    var str3="<img src=";
+    var str4="/>";
+    var br="<br>";
+var st1,st2,st3,st4;
+if(i1.checked && !i2.checked && !i3.checked )
+    {
+       st1="'собака.jpg'";
+       win.document.write(str1+str3+st1+str4+str2);
+       win.document.write(br);
+       win.document.write(Sign1);
+       win.document.write(br);
+    }
+else
+if(!i1.checked && i2.checked && !i3.checked )
+    { 
+       st2="'цветок.jpg'";
+       win.document.write(str1+str3+st2+str4+str2);
+       win.document.write(br);
+       win.document.write(Sign1);
+       win.document.write(br);
+    }
+else
+if(!i1.checked && !i2.checked && i3.checked)
+    {
+       st3="'букет.jpg'";
+       win.document.write(str1+str3+st3+str4+str2);
+       win.document.write(br);
+       win.document.write(Sign1);
+       win.document.write(br);
+    }
+else
+if(i1.checked && i2.checked && !i3.checked )
+    {
+       st1="'собака.jpg'";
+       st2="'цветок.jpg'";
+       win.document.write(str1+str3+st1+str4+str3+st2+str4+str2);
+       win.document.write(br);
+       win.document.write(Sign1);
+       win.document.write(br);
+    }
+else
+if(i1.checked && !i2.checked && i3.checked )
+    {
+       st1="'собака.jpg'";
+       st3="'букет.jpg'";
+       win.document.write(str1+str3+st1+str4+str3+st3+str4+str2);
+       win.document.write(br);
+       win.document.write(Sign1);
+       win.document.write(br);
+    }
+else
+if(!i1.checked && i2.checked && i3.checked )
+    {
+       st2="'цветок.jpg'";
+       st3="'букет.jpg'";
+       win.document.write(str1+str3+st2+str4+str3+st3+str4+str2);
+       win.document.write(br);
+       win.document.write(Sign1);
+       win.document.write(br);
+    }
+else
+if(i1.checked && i2.checked && i3.checked )
+    {
+       st1="'собака.jpg'";
+       st2="'цветок.jpg'";
+       st3="'букет.jpg'";
+       win.document.write(str1+str3+st1+str4+str3+st2+str4+str3+st3+str4+str2);
+       win.document.write(br);
+       win.document.write(Sign1);
+       win.document.write(br);
+    }
+else
+if(!i1.checked && !i2.checked && !i3.checked )
+    {
+        st4='Вы не выбрали ничего!';
+        var nothing1="<body>"
+        var nothing2="</body>"
+        win.document.write(nothing1+st4+nothing2);
+        win.document.write(br);
+    }  
+    var cl ='<input type="button" value="закрыть"' +'onClick="window.close();">';
+win.document.write(cl);
+win.document.close();
+} 
+</script>
+</head>
+<body>
+<h1>Страничка по вашему заказу</h1> 
+<pre> <form id="My form" name="My form ">  
+Заголовок:<input type="text" value=" Введите заголовок!" id="heading" name="heading">
+
+    Выберите желаемое изображение:<br><div>
+    <input type='checkbox' id='i1' name='i1' value="Собака"> <label for="i1">Собака</label>
+    <input type='checkbox' id='i2' name='i2' value="Цветок"> <label for="i2">Цветок</label>
+    <input type='checkbox' id='i3' name='i3' value="Букет"> <label for="i3">Букет</label></div>
+Подпись:<input type="text" value="Введите подпись к картинке" id="sign" name="sign" size="25">
+
+Цвет фона:
+
+<select>
+    <option id="bc1" value="white">Белый</option>
+    <option id="bc2" value="black">Черный</option>
+    <option id="bc3" value="purple">Фиолетовый</option>
+</select>
+
+Цвет текста:<br>
+<div>
+<input type="radio" id="tc1" name="tc" value="black">   <img src="%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B9.png">
+<input type="radio" id="tc2" name="tc" value="green">   <img src="%D0%B7%D0%B5%D0%BB%D0%B5%D0%BD%D1%8B%D0%B9.png">
+<input type="radio" id="tc3" name="tc" value="yellow">   <img src="%D0%B6%D0%B5%D0%BB%D1%82%D1%8B%D0%B9.png">
+</div>
+<hr>
+  <input type="button" value="Сформировать" OnClick="validate()">                                   <input type="reset">
+    </form>
+</pre>
+</body>
+    
+</html>

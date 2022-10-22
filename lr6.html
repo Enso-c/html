@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Лабораторная 6.1
+	</title>
+	<style type="text/css">
+     h1{color: black;text-align:black }
+     body{background-color: silver;}
+     input{font-weight: 100}
+</style>
+<script type="text/javascript">
+	var arr1=new Array(" ","Alfa Romeo 10000$","Bentley 200000$","Maserati 300000$","Bugatti 400000$")
+	function DoEvent(num) 
+	{
+		var cv=document.getElementById('info');
+		cv.value=arr1[num];
+	}
+</script>
+</head>
+<body>
+<h1>Sale of cars:</h1>
+<form>
+<pre>
+<img src="alfa.Jpg" name="alfa" id="alfa" value="1" onmouseover="DoEvent(1);" onmouseout="DoEvent(0);">  <img src="bentley.Jpg" name="bentley" id="bentley" value="2" onmouseover="DoEvent(2);" onmouseout="DoEvent(0);">
+
+<img src="maserati.Jpg" name="maserati" id="maserati" value="3" onmouseover="DoEvent(3);" onmouseout="DoEvent(0);">  <img src="bugatti.Jpg" name="bugatti" id="bugatti" value="4" onmouseover="DoEvent(1);" onmouseout="DoEvent(0);">
+</pre>
+	<input type="text" name="info" id="info" value="">
+</form>
+</body>

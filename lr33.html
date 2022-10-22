@@ -1,0 +1,29 @@
+<html>
+<head>
+<style type="text/css">
+h1 {color:red;text-align:center;}
+body {background-color:royalblue; font-weight:bold;}
+input {font-weight:bold;}
+</style>
+<script>
+function sqr()
+{
+var x=document.getElementById("x").value;
+var y=document.getElementById("y").value;
+var m=Math.sqrt((x*x)+(y*y));
+alert(m);
+}
+</script>
+</head>
+<body>   
+<h1>Расстояние до точки</h1>
+<hr>
+<form>
+Координаты:
+<input type=text value="3" id='x' name="x" size="5">
+<input type=text value="4" id='y' name="y" size="5">
+<input type=button value="Расстояние" OnClick="sqr()">
+<hr>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Лабораторная 6.2
+	</title>
+	<style> 
+		img{width: 200;height: 200;}
+	</style>
+<script>
+	var i=0;
+	function SlideShow() 
+	{
+		var img = new Array('alfa.Jpg','bentley.Jpg','maserati.Jpg','bugatti.Jpg');
+		if (i>=4)
+		{ 
+			i=0;
+		}
+		var r=document.getElementById('image');
+		r.src=img[i];
+		i++;
+	}
+</script>
+</head>
+<body>
+	<h1>Press the button for next picture</h1>
+
+	<img id="image" src="alfa.Jpg">
+	<form>
+		<input type="button" value="Next picture" name="Next picture" onclick="SlideShow();">
+	</form>
+</body>
+</html>

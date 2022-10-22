@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+#im2 {position:absolute;left:0;top:0}
+</style>
+</head>
+<body>
+<img src="p5_0.png" id="im1" width="50%" />
+<img src="bird2.png" id="im2" width="60" height="60" />
+<script type="text/JavaScript">
+function Right()//функция перемещения вправо
+{
+	if (x<(x1-x2))
+		{
+			x+=s;
+			r2.style.left=x
+			setTimeout("Right()",50);
+		} 
+	
+}
+function Down()//функция перемещения вниз
+{
+if (y<((y1-y2)))
+		{
+			y+=s;
+			r2.style.top=y
+			setTimeout("Down()",50);
+		}
+}
+function Left()//функция перемещения влево
+{
+	if (x<=0)
+	{
+		x-=s;
+		r2.style.left=x
+		setTimeout("Left()",50)
+	}
+}
+
+x=0;
+y=0; 
+s=10;
+r1=document.getElementById('im1')
+r2=document.getElementById('im2')
+x1=r1.width //ширина фона
+y1=r1.height
+x2=r2.width
+y2=r2.height
+Down(Left(Down(Right())));//вызов всех функций по очереди
+</script>
+</body>
+</html>

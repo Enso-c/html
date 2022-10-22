@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8">
+	<title>Laboratory work 7</title>
+	<style type="text/css">
+		
+		#img
+		{
+			display: block;
+			border:50px outset  #ffA089 ;
+			width: 200;
+			height: 200;
+			padding: 5px 5px 5px 5px;
+		}
+		#p
+		{
+			display: none;
+			border: 5px outset #ffA089;
+		}
+	</style>
+	<script type="text/javascript">
+		function displ()
+		{
+
+			var p=document.getElementById('st');
+			var p1=document.getElementById('img');
+			var r=document.getElementById('button')
+			if (p.style.display=='none')
+			{
+				p.style.display='block';
+				p1.style.display='none';
+				r.value='Show picture';
+			}
+			else
+			{
+				p.style.display='none';
+				p1.style.display='block';
+				r.value='Show text';
+			}
+		}
+	</script>
+</head> 
+<body bgcolor="blue" text='white' font-style='italic' size='22'>
+	<form>
+		<input type="button" id='button' value='Show picture' onclick="displ();">
+	</form>
+<h1>Иннокентий Анненский</h1>
+<h2>Свечку внесли</h2>
+<pre>
+<p id="st"><i>Не мерещится ль вам иногда,
+Когда сумерки ходят по дому,
+Тут же возле иная среда,
+Где живём мы совсем по-другому?
+
+С тенью тень там так мягко слилась,
+Там бывает такая минута,
+Что лучами незримыми глаз
+Мы уходим друг в друга как будто.
+
+И движеньем спугнуть этот миг
+Мы боимся иль словом нарушить,
+Точно ухом кто возле приник,
+Заставляя далекое слушать.
+
+Но едва запылает свеча,
+Чуткий мир уступает без боя,
+Лишь из глаз по наклонам луча
+Тени в пламя сбегут голубое.</i></p><pre>
+	<img src='свеча.Jpg' id='img'/>
+</body>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Лабораторная 3/2</title>
+    </head>
+    <body>
+<script>
+    
+var today=new Date();   
+var myYear=prompt("Введите год рождения:");
+var myMounth=prompt("Введите месяц рождения:");
+var myDay=prompt("Введите день рождения:"); 
+var dayNow=today.getDate();
+var mouthNow=today.getMonth();
+var yearNow=today.getFullYear();
+    var sumday=0;
+    var i=0;
+    for(i==0;i<=myMounth;i++)
+{
+    if(myMounth==1||3||5||7||8||10||12)
+    {
+         m=31;
+    }
+    else
+        if(myMounth==2)
+        {
+            if(myYear%4==0)
+                {
+                    m=28;
+                }
+                 else
+                    m=29;
+                
+        }
+        else
+        {
+            m=30;
+        } 
+     sumday=m+sumday;  
+}
+
+     if(myMounth==1||3||5||7||8||10||12)
+    {
+         m=31;
+    }
+    else
+        if(myMounth==2)
+        {
+            if(myYear%4==0)
+                {
+                    m=28;
+                }
+                 else
+                    m=29;
+                
+        }
+        else
+        {
+            m=30;
+        } 
+    
+    var day=m-myDay+dayNow;
+    var leap=(yearNow-myYear)/4;
+    var All=(((yearNow-myYear)*365)-leap)+sumday+day;
+    document.write('Я прожил всего '+All+' дней');
+</script>
+</body>
+</html>
